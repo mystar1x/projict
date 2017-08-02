@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shivansh</title>
+</head>
+<body onload="genCap();">
+<script type="text/javascript">
+	var a,b,c,d;
+	function genCap()
+	{
+		a=Math.floor(Math.random(1,15)*15);
+		c=parseInt(Math.random(1,15)*15%15);
+		b=parseInt(Math.random(1,15)*15%15);
+		d=parseInt(Math.random(1,15)*15%15);
+		document.getElementById("img1").src="img/"+a+".jpg";
+		document.getElementById("img2").src="img/"+b+".jpg";
+		document.getElementById("img3").src="img/"+c+".jpg";
+		document.getElementById("img4").src="img/"+d+".jpg";
+	}
+	function check()
+	{
+		var x=document.getElementById("no").value;
+		var y=a+""+b+c+d;
+
+		if(x==y)
+		{
+			alert("Correct");
+		}
+		else
+		{
+			alert("Wrong");
+		}
+	}
+</script>
+<img src="" id="img1" height="100" width="150">
+<img src="" id="img2" height="100" width="150">
+<img src="" id="img3" height="100" width="150">
+<img src="" id="img4" height="100" width="150">
+<form name="s">
+	<input type="number" id="no">
+	<input type="submit" onclick="check();">
+</form>
+</body>
+</html>
